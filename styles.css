@@ -1,0 +1,715 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 顶部导航栏样式 */
+#navbar {
+    background-color: #e0e5df;
+    color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar li {
+    margin: 0 20px;
+}
+
+#navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    color: #ccc;
+}
+
+/* 个人照片区域样式 */
+#hero {
+    display: none; /* 初始隐藏 */
+    margin-top: 0px; /* 给导航栏留出空间 */
+    text-align: center;
+}
+
+#hero img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+}
+
+/* 主内容区域样式 */
+#content {
+    width: 100%; /* Make it take up the full width of the container */
+    padding: 20px; /* Keep some padding for spacing within */
+    margin: 0 auto; /* Center the content if max-width is applied */
+    text-align: left; /* Left-align the text if desired */
+    background-color: #fffaf4;
+}
+
+/* About Me 部分的样式 */
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+.profile-image {
+    width: 50px;
+    height: auto;
+    float: auto; /* Float the image to the left */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 10px;
+}
+
+.name-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+
+.about-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+/* Resume Link */
+.resume-link {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.resume-link .profile-image {
+    cursor: pointer;
+    width: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-link .profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* CV Text */
+/* Arrow pointing to image */
+.cv-text::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #333; /* Arrow color */
+    margin-right: 5px;
+    transform: translateY(-5px); /* Adjust position */
+}
+.cv-text {
+    font-size: 2em;
+    color: #481d93;
+    margin-top: 3px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    gap: 30px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #939391;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.social-icon:hover {
+    color: #0073b1; /* LinkedIn color as example, adjust as desired */
+}
+
+/* Education Section Styling */
+.education-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left; /* Centers the entire section horizontally */
+    background-color: #ffffff; /* Light background color */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    max-width: 80%; /* Restrict the max width to keep it centered */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.education-logo {
+    width: 130px;
+    height: auto;
+    margin-right: 130px; /* Space between logo and text */
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.education-content {
+    text-align: left; /* Left-align the text within the content section */
+}
+
+.education-content h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.degree {
+    margin-bottom: 20px;
+}
+
+.degree-link {
+    font-size: 1.5em;
+    color: #7b8b6f; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+.school-link {
+    color: #96a48b; /* Change link color */
+    text-decoration: none;
+}
+
+.school-link:hover {
+    text-decoration: underline;
+}
+
+.degree-link:hover {
+    text-decoration: underline;
+}
+
+.education-content p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 20px;
+}
+/* Research Section */
+.research-section {
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fffaf4;
+}
+
+.research-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Research Card Styling */
+.research-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.research-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.research-card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.research-card a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.research-card a:hover {
+    text-decoration: underline;
+}
+
+/* Research Tags */
+.research-tags {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+/* Skills Section */
+.skills-section {
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fffaf4;
+    
+}
+.skills-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+} 
+
+.skill {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.skill:hover {
+    background-color: #dbe2ec;
+}
+
+/* Skills Section */
+
+/* Skills Category Headers */
+.skills-category h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Skills Containers */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.skill-section h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5b7493;
+    margin-bottom: 5px;
+}
+.skill-section h5 {
+    font-size : 18px ;
+    font-weight: bold;
+    color: #96a48b;
+    margin-bottom: 3px;
+
+}
+
+.skill-section p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.application-skills .skill {
+    background: linear-gradient(45deg, #34d298, #2fae7f);
+}
+
+.tools-skills .skill {
+    background: linear-gradient(45deg, #FF9A8B, #FF6A88, #FF99AC);
+}
+
+.math-skills .skill {
+    background: linear-gradient(45deg, #89FFFD, #00C9FF);
+}
+
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .skills-container {
+        justify-content: center;
+    }
+    .skill {
+        flex: 1 1 100px;
+    }
+}
+
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 30%;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #f5f4f0;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; /* Limit the height to 80% of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    text-align: left;
+    position: auto;
+    box-shadow: 0 4px 8px #a7bec6;
+    animation: fadeInScale 0.4s ease;
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Start smaller */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Full size */
+    }
+}
+
+.modal-content h3 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #6e4740;
+    margin-bottom: 20px;
+}
+
+
+.carousel-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.carousel-section {
+    margin: 20px 0;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f5f4f0;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.footer-content h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #6e4740;
+}
+
+.footer-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    color: #6e4740;
+}
+
+.contact-item a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-item span {
+    color: #555;
+}
+
+
+/* neww expericen page*/
+/* General Page Styling */
+
+.experience-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.experience-card {
+    position: relative;
+    width: 80%; /* Adjust width as needed */
+    max-width: 1200px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: scale(1.05);
+}
+
+.experience-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay1 {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: rgb(203, 25, 25);
+}
+.overlay2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: rgb(32, 128, 69);
+}
+.overlay3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255);
+}.overlay4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: rgb(67, 176, 206);
+}.overlay5 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: rgb(5, 0, 9);
+}
+.overlay h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+    opacity: 0.8;
+}
+
+/* Optional: Add a fade-in effect for hover */
+.experience-card:hover .overlay {
+    transition: opacity 0.3s ease;
+}
+
+/* Modal Background for Experience */
+.experience-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.experience-modal-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 80%;
+    max-height: 100%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Close Button */
+.experience-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+
+.experience-modal-close:hover {
+    color: #ff0000;
+}
+
+/* Modal Body Styling */
+#experience-modal-body h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#experience-modal-body p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+#experience-modal-body ul {
+    list-style-type: disc;
+    font-size: 22px;
+    margin-left: 20px;
+    color: rgb(39, 39, 141);
+}
+
+#experience-modal-body ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgb(39, 39, 141);
+}
+
+/* Modal Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#nls-link {
+    color: #0073e6; /* Set the link color */
+    text-decoration: none; /* Remove underline if needed */
+    font-size: 20px;
+}
+.pdf-link {
+    color: #0073e6; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+
+
+
+
